@@ -1,29 +1,32 @@
-
+/* ==============================================================
+   DENTIST.CH - LOVABLE EXACT MATCH CSS
+   ============================================================== */
 
 :root {
-    --brand-primary: #4D9BCB;
-    --brand-secondary: #1F262E;
+    /* Brand Colors matching target */
+    --brand-primary: #6EACD1;
+    /* Sky Blue */
     --brand-primary-hover: #5a94b5;
 
-    --gradient-sky: linear-gradient(135deg, #4D9BCB, #93CAEC, #ADD6EB);
-    --gradient-sky-text: linear-gradient(135deg, #4D9BCB, #93CAEC);
+    /* Light Theme (Default) */
+    --bg-page: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+
+    --border-color: #e2e8f0;
+    --glass-border: rgba(226, 232, 240, 0.8);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+
+    /* Map to specific glow */
+    --glow-color: rgba(110, 172, 209, 0.15);
 }
 
-.dark-theme {
-    --bg-page: #0b0f19;
-    --bg-surface: #131b2c;
-    --bg-surface-elevated: #1e293b;
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
-    --text-muted: #64748b;
 
-    --border-color: #1e293b;
-    --glass-border: rgba(255, 255, 255, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
-
-    --glow-color: rgba(110, 172, 209, 0.08);
-}
 
 * {
     margin: 0;
@@ -40,6 +43,7 @@ body {
     overflow-x: hidden;
 }
 
+/* --- Ambient Glows --- */
 .glow-bg {
     position: fixed;
     width: 600px;
@@ -62,6 +66,7 @@ body {
     right: -200px;
 }
 
+/* --- Navigation --- */
 .navbar {
     position: fixed;
     top: 0;
@@ -130,46 +135,16 @@ body {
     color: white;
 }
 
-.theme-toggle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid var(--border-color);
-    background: var(--bg-surface-elevated);
-    color: var(--text-primary);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
-}
 
-.theme-toggle:hover {
-    background: var(--border-color);
-}
 
-.theme-toggle .fa-sun {
-    display: none;
-}
-
-.theme-toggle .fa-moon {
-    display: block;
-}
-
-.dark-theme .theme-toggle .fa-sun {
-    display: block;
-}
-
-.dark-theme .theme-toggle .fa-moon {
-    display: none;
-}
-
+/* --- Containers --- */
 .main-container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 120px 24px 60px;
 }
 
+/* --- Titles --- */
 .section-title {
     font-size: 14px;
     font-weight: 700;
@@ -179,6 +154,7 @@ body {
     text-align: center;
 }
 
+/* --- Hero Section --- */
 .hero-section {
     text-align: center;
     margin-bottom: 80px;
@@ -198,54 +174,36 @@ body {
     margin-bottom: 24px;
 }
 
+/* --- Logo Ring --- */
 .logo-container {
     margin-bottom: 24px;
 }
 
-.logo-ring,
-.story-ring {
-    width: 112px;
-    height: 112px;
+.logo-ring {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    padding: 3px;
-    background: var(--gradient-sky);
+    border: 2px solid var(--brand-primary);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    background: var(--bg-surface);
+    box-shadow: 0 4px 12px rgba(110, 172, 209, 0.2);
 }
 
-.story-ring .logo {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    background: white;
+.logo-text-inner {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--brand-primary);
+    line-height: 1;
 }
 
 .main-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--brand-secondary);
-    margin-bottom: 4px;
-    letter-spacing: -0.6px;
-}
-
-.slogan {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--brand-primary);
     margin-bottom: 16px;
-}
-
-.text-gradient-sky {
-    background: var(--gradient-sky-text);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    display: inline-block;
+    letter-spacing: -1px;
 }
 
 .hero-headline {
@@ -317,17 +275,54 @@ body {
     background: rgba(110, 172, 209, 0.1);
 }
 
+/* --- Story Highlights --- */
+.story-highlights {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    justify-content: center;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    max-width: 100%;
+}
+
+.story-ring {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(45deg, var(--brand-primary) 0%, #a2cce3 100%);
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.story-ring:hover {
+    transform: scale(1.05);
+}
+
+.story-ring img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid var(--bg-page);
+}
+
+/* --- VSL Section --- */
 .vsl-section {
     margin-bottom: 80px;
 }
 
 .vsl-wrapper {
-    padding: 16px;
+    padding: 0;
+    width: 100%;
+    /* Maximize container space */
 }
 
 @media (max-width: 768px) {
     .vsl-wrapper {
-        padding: 8px;
+        padding: 0;
     }
 }
 
@@ -343,6 +338,7 @@ body {
 @media (max-width: 600px) {
     .vsl-video-container {
         border-radius: 8px;
+        /* Slightly softer radius internally to fit tight mobile screens */
     }
 }
 
@@ -382,6 +378,7 @@ body {
     transform: scale(1.1);
 }
 
+/* --- Services Grid --- */
 .services-section {
     margin-bottom: 80px;
 }
@@ -444,6 +441,7 @@ body {
     justify-content: center;
     font-size: 18px;
     padding-left: 4px;
+    /* Optical optical center adjustment for play icon */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s;
 }
@@ -467,6 +465,7 @@ body {
     color: var(--text-secondary);
 }
 
+/* --- Awards Section --- */
 .awards-section {
     margin-bottom: 80px;
 }
@@ -511,6 +510,7 @@ body {
     color: var(--text-primary);
 }
 
+/* --- Generic Glass Container --- */
 .glass-container {
     background: var(--bg-surface);
     border: 1px solid var(--border-color);
@@ -519,6 +519,7 @@ body {
     box-shadow: var(--shadow-md);
 }
 
+/* --- Reviews Section --- */
 .reviews-section {
     margin-bottom: 80px;
 }
@@ -631,6 +632,7 @@ body {
     background: var(--brand-primary);
 }
 
+/* --- Contact Form --- */
 .contact-section {
     margin-bottom: 80px;
 }
@@ -664,7 +666,7 @@ body {
     width: 100%;
     padding: 14px 16px;
     background: var(--bg-surface-elevated);
-    border: 1px solid var(--border-color);
+    border: 1px solid #cbd5e1;
     border-radius: 12px;
     color: var(--text-primary);
     font-family: inherit;
@@ -677,14 +679,19 @@ body {
     border-color: var(--brand-primary);
 }
 
+.form-wrapper {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+}
+
 .submit-btn {
-    width: 100%;
-    justify-content: center;
-    padding: 16px;
+    justify-self: center;
+    padding: 16px 48px;
     font-size: 16px;
     margin-top: 8px;
 }
 
+/* --- Map Section --- */
 .map-section {
     margin-bottom: 80px;
 }
@@ -728,6 +735,7 @@ body {
     min-height: 300px;
 }
 
+/* --- Footer --- */
 .site-footer {
     background: var(--bg-surface);
     border-top: 1px solid var(--border-color);
@@ -792,6 +800,7 @@ body {
     color: var(--brand-primary);
 }
 
+/* --- Floating Chatbot UI --- */
 .chat-toggle {
     position: fixed;
     bottom: 32px;
@@ -830,7 +839,7 @@ body {
     max-width: calc(100vw - 32px);
     height: 600px;
     max-height: calc(100vh - 140px);
-    background: var(--bg-surface);
+    background: #ffffff;
     border: 1px solid var(--border-color);
     border-radius: 24px;
     box-shadow: var(--shadow-lg);
@@ -922,7 +931,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    background: var(--bg-page);
+    background: #ffffff;
 }
 
 .chat-msg {
@@ -1017,6 +1026,7 @@ body {
     }
 }
 
+/* --- Video Modal --- */
 .video-modal {
     position: fixed;
     inset: 0;
@@ -1106,6 +1116,7 @@ body {
     }
 }
 
+/* --- Animations --- */
 .fade-in-up {
     opacity: 0;
     transform: translateY(20px);

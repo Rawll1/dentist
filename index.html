@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -35,29 +35,47 @@
                     <button class="lang-btn" data-lang="fr">FR</button>
                     <button class="lang-btn" data-lang="it">IT</button>
                 </div>
-                <button class="theme-toggle" aria-label="Toggle theme">
-                    <i class="fas fa-sun"></i>
-                    <i class="fas fa-moon"></i>
-                </button>
             </div>
         </div>
     </header>
 
     <main class="main-container fade-in-up">
+        <!-- Hero Section -->
         <section class="hero-section">
             <div class="logo-container">
-                <div class="story-ring">
-                    <img src="assets/dentist_logo.jpg" alt="dentist.ch logo" class="logo">
+                <div class="logo-ring">
+                    <img src="assets/dentist_logo.jpg" alt="dentist.ch Logo"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                 </div>
             </div>
-            <h1 class="main-title">dentist.ch</h1>
-            <p class="slogan text-gradient-sky">SmileYourself</p>
             <div class="badge-subtitle" data-i18n="subtitle">Dr. med. dent. · Zurich · Since 1990</div>
+            <h1 class="main-title">SmileYourself</h1>
             <h2 class="hero-headline" data-i18n="headline">Prevention today,<br>Confidence for life.</h2>
             <p class="description" data-i18n="description">
                 Prevention today, confidence for life. Since 1990, we at dentist.ch have been breaking new ground: with
                 cutting-edge technologies, holistic dentistry, and a clear focus on prevention over repair.
             </p>
+
+            <div class="story-highlights">
+                <div class="story-ring">
+                    <img src="assets/cerec-story.jpeg" alt="Story">
+                </div>
+                <div class="story-ring">
+                    <img src="assets/x-ray-story.jpeg" alt="Story">
+                </div>
+                <div class="story-ring">
+                    <img src="assets/aligners-story.jpeg" alt="Story">
+                </div>
+                <div class="story-ring">
+                    <img src="assets/implants-story.jpeg" alt="Story">
+                </div>
+                <div class="story-ring">
+                    <img src="assets/air-flow-story.jpeg" alt="Story">
+                </div>
+                <div class="story-ring">
+                    <img src="assets/veneers-story.jpeg" alt="Story">
+                </div>
+            </div>
             <div class="cta-buttons">
                 <a href="https://www.instagram.com/alessandro.devigus/" target="_blank" class="btn btn-secondary">
                     <i class="fab fa-instagram"></i> <span data-i18n="follow">Follow</span>
@@ -66,12 +84,13 @@
             </div>
         </section>
 
+        <!-- Welcome Video (VSL) Section -->
         <section class="vsl-section fade-in-up">
             <h3 class="section-title" data-i18n="vsl_title">WELCOME</h3>
-            <div class="glass-container vsl-wrapper">
+            <div class="vsl-wrapper">
                 <div class="vsl-video-container">
                     <iframe width="100%" height="100%"
-                        src="https://www.youtube.com/embed/RK7VRyM50Dg?autoplay=1&mute=0&rel=0"
+                        src="https://www.youtube.com/embed/RK7VRyM50Dg?autoplay=1&mute=0&rel=0&playsinline=1"
                         title="Welcome to dentist.ch" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen
@@ -80,8 +99,10 @@
             </div>
         </section>
 
+        <!-- Services Section (Video Thumbnails Grid) -->
         <section class="services-section fade-in-up">
             <div class="grid-layout">
+                <!-- Card 1 -->
                 <div class="service-card" data-ig="https://www.instagram.com/reel/DTjuaogjDE2/embed">
                     <div class="video-thumbnail">
                         <img src="assets/service-cerec.jpg" alt="CEREC" loading="lazy">
@@ -92,6 +113,7 @@
                         <p data-i18n="srv_cerec">Same-Day Restorations</p>
                     </div>
                 </div>
+                <!-- Card 2 -->
                 <div class="service-card" data-ig="https://www.instagram.com/reel/DTnnoLSjFTo/embed">
                     <div class="video-thumbnail">
                         <img src="assets/service-xray.jpg" alt="3D X-Ray" loading="lazy">
@@ -102,6 +124,7 @@
                         <p data-i18n="srv_xray_desc">Precision Diagnostics</p>
                     </div>
                 </div>
+                <!-- Card 3 -->
                 <div class="service-card" data-ig="https://www.instagram.com/reel/DTxJK7ljNXg/embed">
                     <div class="video-thumbnail">
                         <img src="assets/service-aligners.jpg" alt="Aligner" loading="lazy">
@@ -112,6 +135,7 @@
                         <p data-i18n="srv_aligner">Invisible Braces</p>
                     </div>
                 </div>
+                <!-- Card 4 -->
                 <div class="service-card" data-ig="https://www.instagram.com/reel/DTp99WvjHvX/embed">
                     <div class="video-thumbnail">
                         <img src="assets/service-implants.jpg" alt="Implants" loading="lazy">
@@ -122,6 +146,7 @@
                         <p data-i18n="srv_implants_desc">Permanent Solutions</p>
                     </div>
                 </div>
+                <!-- Card 5 -->
                 <div class="service-card" data-ig="https://www.instagram.com/reel/DTyGI1cDHIb/embed">
                     <div class="video-thumbnail">
                         <img src="assets/service-airflow.jpg" alt="Air-Flow" loading="lazy">
@@ -132,6 +157,7 @@
                         <p data-i18n="srv_airflow_desc">Gentle Cleaning & Care</p>
                     </div>
                 </div>
+                <!-- Card 6 -->
                 <div class="service-card" data-ig="https://www.instagram.com/reel/DVWSRNyjCOe/embed">
                     <div class="video-thumbnail">
                         <img src="assets/service-prophylaxis.jpg" alt="Veneers" loading="lazy">
@@ -145,6 +171,7 @@
             </div>
         </section>
 
+        <!-- Awards / Trust Section -->
         <section class="awards-section fade-in-up">
             <div class="awards-grid">
                 <div class="award-card">
@@ -166,6 +193,7 @@
             </div>
         </section>
 
+        <!-- Reviews Section -->
         <section class="reviews-section fade-in-up">
             <h3 class="section-title" data-i18n="reviews_title">REVIEWS</h3>
             <div class="glass-container reviews-wrapper">
@@ -181,12 +209,13 @@
                         </div>
                     </div>
                     <div class="badge-right">
-                        <span data-i18n="based_on">Based on 33 Reviews</span>
+                        <span data-i18n="based_on">Based on over 50 Reviews</span>
                     </div>
                 </div>
 
                 <div class="reviews-slider-container">
                     <div class="reviews-slider" id="reviewsSlider">
+                        <!-- Filled by JS -->
                     </div>
                     <div class="slider-controls">
                         <button class="nav-btn prev-btn" aria-label="Previous Review"><i
@@ -199,6 +228,7 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section class="contact-section fade-in-up" id="booking">
             <h3 class="section-title" data-i18n="contact_title">CONTACT</h3>
             <div class="glass-container form-wrapper">
@@ -224,6 +254,7 @@
             </div>
         </section>
 
+        <!-- Map Section -->
         <section class="map-section fade-in-up">
             <h3 class="section-title" data-i18n="map_title">HOW TO FIND US</h3>
             <div class="glass-container map-wrapper">
@@ -244,6 +275,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-col">
@@ -260,7 +292,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p data-i18n="copyright">© 2026 dentist.ch - All rights reserved</p>
+            <p data-i18n="copyright" id="footer-date">© 2026 dentist.ch - All rights reserved</p>
             <div class="socials">
                 <a href="https://www.instagram.com/alessandro.devigus/" target="_blank" aria-label="Instagram"><i
                         class="fab fa-instagram"></i> @alessandro.devigus</a>
@@ -268,6 +300,7 @@
         </div>
     </footer>
 
+    <!-- Floating Chat Widget -->
     <div id="chatWidget" class="chat-widget">
         <div class="chat-header">
             <div class="chat-avatar-group">
@@ -281,6 +314,7 @@
             <button class="chat-close" aria-label="Close chat"><i class="fas fa-times"></i></button>
         </div>
         <div class="chat-body" id="chatBody">
+            <!-- Messages go here -->
         </div>
         <div class="chat-footer">
             <form id="chatForm">
@@ -295,6 +329,7 @@
         <i class="fas fa-comment"></i>
     </div>
 
+    <!-- Video Modal for Instagram Reels -->
     <div id="videoModal" class="video-modal">
         <div class="video-modal-backdrop"></div>
         <div class="video-modal-content">
@@ -304,6 +339,7 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="script.js" defer></script>
 </body>
 
